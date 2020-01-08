@@ -1,13 +1,12 @@
-
-import axios from 'axios';
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
-import { tokenConfig } from './authActions';
-import { returnErrors } from './errorActions';
+import axios from "axios";
+import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from "./types";
+import { tokenConfig } from "./authActions";
+import { returnErrors } from "./errorActions";
 
 export const getItems = () => dispatch => {
   dispatch(setItemsLoading());
   axios
-    .get('/api/items')
+    .get("/api/items")
     .then(res =>
       dispatch({
         type: GET_ITEMS,
@@ -21,7 +20,7 @@ export const getItems = () => dispatch => {
 
 export const addItem = item => (dispatch, getState) => {
   axios
-    .post('/api/items', item, tokenConfig(getState))
+    .post("/api/items", item, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: ADD_ITEM,

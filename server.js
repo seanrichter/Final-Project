@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require('path');
-const config = require('config');
+const path = require("path");
+const config = require("config");
 // SAVE THIS STEP UNTIL ROUTES
 const routes = require("./routes");
 const app = express();
@@ -16,10 +16,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-app.use('/api/items', require('./routes/api/items'));
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
-
+app.use("/api/items", require("./routes/api/items"));
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/auth", require("./routes/api/auth"));
 
 // SAVE THIS STEP UNTIL ROUTES
 app.use(routes);
@@ -34,6 +33,16 @@ mongoose.connect(
     useUnifiedTopology: true
   }
 );
+
+// Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 // Start the API server
 app.listen(PORT, function() {

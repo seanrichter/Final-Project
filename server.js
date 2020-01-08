@@ -24,6 +24,9 @@ app.use("/api/auth", require("./routes/api/auth"));
 app.use(routes);
 app.use("/api/users", require("./routes/api/users"));
 
+// DB Config
+const db = config.get('mongoURI');
+
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/Final-Project",

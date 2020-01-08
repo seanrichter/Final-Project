@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require('path');
+const config = require('config');
 // SAVE THIS STEP UNTIL ROUTES
 const routes = require("./routes");
 const app = express();
@@ -14,7 +16,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-app.use("/api/items", require("./routes/api/items"));
+app.use('/api/items', require('./routes/api/items'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+
 
 // SAVE THIS STEP UNTIL ROUTES
 app.use(routes);

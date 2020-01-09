@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ListGroup, Modal, Button } from "react-bootstrap";
-import CocktailCard from "./CocktailCard";
-import API from "../utils/API";
+import CocktailCard from "../Cards/CocktailCard";
+import API from "../../utils/API";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 

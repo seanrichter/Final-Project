@@ -8,8 +8,8 @@ import {
   ListGroup,
   Container
 } from "react-bootstrap";
-import MovieDetailModal from "./MovieDetailModal";
-import API from "../utils/API";
+import MovieDetailModal from "../Modals/MovieDetailModal";
+import API from "../../utils/API";
 
 export default class MovieForm extends Component {
   state = {

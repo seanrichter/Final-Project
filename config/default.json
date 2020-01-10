@@ -1,0 +1,5 @@
+  
+{
+    "mongoURI": "Pmongodb+srv://smrichter:Final-Project@final-project-5ag0e.gcp.mongodb.net/test?retryWrites=true&w=majorit",
+    "jwtSecret": "sl_myJwtSecret"
+  }

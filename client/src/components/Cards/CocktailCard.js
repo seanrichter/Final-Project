@@ -16,6 +16,10 @@ export default class CocktailCard extends Component {
       .catch(err => console.log(err));
   }
 
+  onDeleteClick = id => {
+    this.props.deleteItem(id);
+  };
+
   render() {
     return this.state.cocktail.name ? (
       <Card bg="info" text="white" style={{ width: "28rem" }}>
@@ -35,7 +39,6 @@ export default class CocktailCard extends Component {
               </li>
             ))}
           </ul>
-
           <Card.Text>{this.state.cocktail.instructions}</Card.Text>
         </Card.Body>
       </Card>

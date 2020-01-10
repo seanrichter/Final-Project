@@ -43,7 +43,7 @@ const mapRecipe = function(currentArray) {
 
 module.exports = {
   findRandom: function(req, res) {
-    console.log("cocktail");
+    console.log("recipe");
     axios
       .get(
         `https://api.edamam.com/search?q=${query}&app_id=${App_ID}&app_key=${APP_KEY}`

@@ -1,4 +1,4 @@
-const router = require("express").Router();
+/* const router = require("express").Router();
 const movieController = require("../../controllers/movieController");
 
 // MATCHES with /api/movie
@@ -15,3 +15,4 @@ router
   .delete(movieController.remove);
 
 module.exports = router;
+ */

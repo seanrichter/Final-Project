@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
 
@@ -35,3 +35,4 @@ router.delete("/:id", auth, (req, res) => {
 });
 
 module.exports = router;
+ */

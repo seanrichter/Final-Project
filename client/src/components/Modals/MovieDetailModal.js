@@ -1,4 +1,4 @@
-/* import React, { Component } from "react";
+import React, { Component } from "react";
 import { ListGroup, Modal, Button } from "react-bootstrap";
 import CocktailCard from "../Cards/CocktailCard";
 import API from "../../utils/API";
@@ -108,4 +108,3 @@ export default class MovieDetailModal extends Component {
     );
   }
 }
- */

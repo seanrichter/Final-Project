@@ -1,4 +1,4 @@
-/* import React, { Component } from "react";
+import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
 
 export default class Nav extends Component {
@@ -19,4 +19,3 @@ export default class Nav extends Component {
     );
   }
 }
- */

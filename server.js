@@ -22,7 +22,7 @@ app.use("/api/auth", require("./routes/api/auth"));
 
 // SAVE THIS STEP UNTIL ROUTES
 app.use(routes);
-app.use("/api/users", require("./routes/api/users"));
+
 
 // DB Config
 const db = config.get('mongoURI');

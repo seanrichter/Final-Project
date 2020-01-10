@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import AppNavbar from "./components/Navbars/AppNavbar";
-import ShoppingList from "./components/List Groups/ShoppingList";
-import ItemModal from "./components/Modals/ItemModal";
+import AppNavbar from "./components/AppNavbar";
+
+import ShoppingList from "./components/ShoppingList";
+import ItemModal from "./components/ItemModal";
 import { Provider } from "react-redux";
 import { Container } from "reactstrap";
-import CocktailCard from "./components/Cards/CocktailCard";
+import CocktailCard from "./components/CocktailCard";
 import store from "./store";
 import { loadUser } from "./actions/authActions";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 

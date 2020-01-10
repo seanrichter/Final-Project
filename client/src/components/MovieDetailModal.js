@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+/* import React, { Component } from "react";
 import { ListGroup, Modal, Button } from "react-bootstrap";
-import API from "../../utils/API";
+import API from "../utils/API";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
 
@@ -105,3 +105,5 @@ export default class MovieDetailModal extends Component {
     );
   }
 }
+
+ */

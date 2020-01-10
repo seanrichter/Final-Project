@@ -18,7 +18,7 @@ export default {
     return Axios.post("/api/movie", movieData);
   },
   // Gets a random recipe
-  getRandomRecipe: function() {
-    return Axios.get("/api/recipe");
+  getRandomCocktail: function() {
+    return Axios.get("/api/cocktail");
   }
 };

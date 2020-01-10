@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/* import React, { Component } from "react";
 import { Card } from "react-bootstrap";
 import API from "../../utils/API";
 
@@ -44,3 +44,4 @@ export default class CocktailCard extends Component {
     );
   }
 }
+ */

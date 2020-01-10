@@ -1,4 +1,4 @@
-const db = require("../models");
+/* const db = require("../models");
 
 // STANDARD CREATE READ UPDATE DELETE
 // YOU CAN ALMOST COPY THIS VERBATIM
@@ -44,3 +44,4 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+ */

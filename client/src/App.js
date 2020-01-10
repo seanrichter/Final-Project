@@ -23,8 +23,8 @@ class App extends Component {
         <div className="App">
           <AppNavbar />
           <Container>
-            <ItemModal />
-            <ShoppingList />
+            {/* <ItemModal />
+            <ShoppingList /> */}
             <RecipeCard />
           </Container>
         </div>

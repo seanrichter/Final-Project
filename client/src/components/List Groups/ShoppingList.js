@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/* import React, { Component } from "react";
 import { Container, ListGroup, ListGroupItem, Button } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
@@ -56,3 +56,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { getItems, deleteItem })(ShoppingList);
+ */

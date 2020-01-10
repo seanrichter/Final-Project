@@ -1,4 +1,4 @@
-/* const axios = require("axios");
+const axios = require("axios");
 
 const mapCocktail = function(currentArray) {
   const returnArray = currentArray.map(drink => {
@@ -108,4 +108,3 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
- */

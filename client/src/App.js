@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import AppNavbar from "./components/Navbars/AppNavbar";
-import ShoppingList from "./components//List Groups/ShoppingList";
+import ShoppingList from "./components/List Groups/ShoppingList";
 import ItemModal from "./components/Modals/ItemModal";
 import { Container } from "reactstrap";
-
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/authActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import RecipeCard from "./components/Cards/RecipeCard";
 
 class App extends Component {
   componentDidMount() {
@@ -20,17 +18,32 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
+        <div className='App'>
           <AppNavbar />
           <Container>
-            {/* <ItemModal />
-            <ShoppingList /> */}
-            <RecipeCard />
+            <ItemModal />
+            <ShoppingList />
           </Container>
         </div>
       </Provider>
     );
   }
 }
+
+/* import React from "react";
+import MovieForm from "./MovieForm";
+import Nav from "./Nav";
+
+function App() {
+  return (
+    <div>
+      <Nav />
+      <MovieForm />
+    </div>
+  );
+}
+
+export default App;
+ */
 
 export default App;

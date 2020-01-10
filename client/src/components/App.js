@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import MovieForm from "./MovieForm";
 import Nav from "./Nav";
 
@@ -12,3 +12,4 @@ function App() {
 }
 
 export default App;
+ */

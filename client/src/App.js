@@ -10,6 +10,7 @@ import { loadUser } from "./actions/authActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import RecipeCard from "./components/Cards/RecipeCard";
 
 class App extends Component {
   componentDidMount() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Container>
             <ItemModal />
             <ShoppingList />
+            <RecipeCard />
           </Container>
         </div>
       </Provider>

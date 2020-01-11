@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import AppNavbar from "./components/AppNavbar";
-
-import ShoppingList from "./components/ShoppingList";
-import ItemModal from "./components/ItemModal";
+import AppNavbar from "./components/Nav/AppNavbar";
+import ShoppingList from "./components/Lists/ShoppingList";
+import ItemModal from "./components/Modals/ItemModal";
 import { Provider } from "react-redux";
 import { Container } from "reactstrap";
-import CocktailCard from "./components/CocktailCard";
+import CocktailCard from "./components/Cards/CocktailCard";
 import store from "./store";
 import { loadUser } from "./actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,21 +31,5 @@ class App extends Component {
     );
   }
 }
-
-/* import React from "react";
-import MovieForm from "./MovieForm";
-import Nav from "./Nav";
-
-function App() {
-  return (
-    <div>
-      <Nav />
-      <MovieForm />
-    </div>
-  );
-}
-
-export default App;
- */
 
 export default App;

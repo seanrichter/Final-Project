@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import {
+  Card, CardImg, CardHeader, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Col, Row
+} from 'reactstrap';
 import API from "../../utils/API";
 
 export default class CocktailCard extends Component {
@@ -22,14 +25,15 @@ export default class CocktailCard extends Component {
 
   render() {
     return this.state.cocktail.name ? (
-      <Card bg="info" text="white" style={{ width: "28rem" }}>
-        <Card.Header>Enjoy with one of these!</Card.Header>
-        <Card.Body>
-          <Card.Title>{this.state.cocktail.name}</Card.Title>
-          <Card.Text>
+      <Col sm="6">
+      <Card>
+        <CardHeader>Enjoy with one of these!</CardHeader>
+        <CardBody inverse style={{ backgroundColor: '#dc3545', borderColor: '#dc3545' }}>
+          <CardTitle>{this.state.cocktail.name}</CardTitle>
+          <CardText>
             Glass: {this.state.cocktail.glass}
             <br />
-          </Card.Text>
+          </CardText>
 
           <div>Ingredients:</div>
           <ul>
@@ -39,9 +43,10 @@ export default class CocktailCard extends Component {
               </li>
             ))}
           </ul>
-          <Card.Text>{this.state.cocktail.instructions}</Card.Text>
-        </Card.Body>
+          <CardText>{this.state.cocktail.instructions}</CardText>
+        </CardBody>
       </Card>
+      </Col>
     ) : (
       <div>still loading...</div>
     );

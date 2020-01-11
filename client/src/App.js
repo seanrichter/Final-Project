@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import AppNavbar from "./components/Nav/AppNavbar";
-import ShoppingList from "./components/Lists/ShoppingList";
-import ItemModal from "./components/Modals/ItemModal";
 import { Provider } from "react-redux";
+import AppNavbar from "./components/Nav/AppNavbar";
 import { Container } from "reactstrap";
 import CocktailCard from "./components/Cards/CocktailCard";
+import MovieCard from "./components/Cards/MovieCard";
+import RecipeCard from "./components/Cards/RecipeCard"
 import store from "./store";
 import { loadUser } from "./actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,9 +22,9 @@ class App extends Component {
         <div className='App'>
           <AppNavbar />
           <Container>
-            <ItemModal />
-            <ShoppingList />
             <CocktailCard />
+            <MovieCard />
+            <RecipeCard />
           </Container>
         </div>
       </Provider>

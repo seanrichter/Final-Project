@@ -34,7 +34,7 @@ export default class CocktailCard extends Component {
   render() {
     return this.state.cocktail.name ? (
       <CardDeck className="CardDeck">
-        <Card>
+        <Card className="cocktail">
           <CardImg
             top
             width="100%"
@@ -65,7 +65,7 @@ export default class CocktailCard extends Component {
           </CardBody>
         </Card>
 
-        <Card>
+        <Card className="recipe">
           <CardImg
             top
             width="100%"
@@ -87,7 +87,7 @@ export default class CocktailCard extends Component {
           </CardBody>
         </Card>
 
-        <Card>
+        <Card className="movie">
           <CardImg
             top
             width="100%"
@@ -106,7 +106,7 @@ export default class CocktailCard extends Component {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </CardText>
-            <Button>Button</Button>
+            <Button>Different Movie?</Button>
           </CardBody>
         </Card>
       </CardDeck>

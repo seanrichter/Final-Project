@@ -4,6 +4,7 @@ const mapCocktail = function(currentArray) {
   const returnArray = currentArray.map(drink => {
     return {
       name: drink.strDrink,
+      image: drink.strDrinkThumb,
       glass: drink.strGlass,
       instructions: drink.strInstructions,
       ingredients: [

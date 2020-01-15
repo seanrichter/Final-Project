@@ -1,4 +1,4 @@
-.CardDeck {
+.cocktail {
     width:100%;
     height:auto;
     margin:auto 0;  
@@ -8,3 +8,14 @@
     background: gray;
     padding: 10px;
   }
+
+.recipe {
+  width:100%;
+    height:auto;
+    margin:auto 0;  
+    word-wrap:break-word;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    background: gray;
+    padding: 10px;
+}

@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const myFoodTypes = ["chicken", "fish", "steak", "vegetarian"];
+const myFoodTypes = ["chicken", "fish", "beef", "vegetarian", "steak", "salad"];
 const random = require("random");
 console.log(myFoodTypes[random.int((min = 0), myFoodTypes.length - 1)]);
 

@@ -13,26 +13,31 @@ import "./Cards.css";
 
 export default class RecipeCard extends Component {
   state = {
-    recipe: [],
-    isLoading: true,
-    errors: null
+    recipe: {}
   };
 
   componentDidMount() {
+    this.getRecipe();
+  }
+
+  getRecipe = () => {
     API.getRandomRecipe()
       .then(res => {
-        this.setState({ recipe: res.data, randomNumber: this.getRndInteger(0, res.data.length -1)});
+        this.setState({
+          recipe: res.data,
+          randomNumber: this.getRndInteger(0, res.data.length - 1)
+        });
         console.log("the state is ", this.state);
       })
       .catch(err => console.log(err));
-  }
+  };
 
   onDeleteClick = id => {
     this.props.deleteItem(id);
   };
 
-  getRndInteger=(min, max) => {
-    return Math.floor(Math.random() * (max - min) ) + min;
+  getRndInteger = (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min;
   };
 
   render() {
@@ -41,26 +46,29 @@ export default class RecipeCard extends Component {
         <CardImg
           top
           width="100%"
-          src= {this.state.recipe[this.state.randomNumber].image}
+          src={this.state.recipe[this.state.randomNumber].image}
           alt="Card image cap"
         />
-        <CardHeader>Here's a recipe!</CardHeader>
-        {" "}
+        <CardHeader>Here's a recipe!</CardHeader>{" "}
         <CardBody
-          inverse
+          inverse="false"
           style={{ backgroundColor: "#dc3545", borderColor: "#dc3545" }}
         >
-          <CardTitle>{this.state.recipe[this.state.randomNumber].name}</CardTitle>
+          <CardTitle>
+            {this.state.recipe[this.state.randomNumber].name}
+          </CardTitle>
           <CardText>
-            <div>Ingredients:</div>
-            <ul>
-              {this.state.recipe[this.state.randomNumber].ingredients.map((ing, index) => (
+            Ingredients
+            {this.state.recipe[this.state.randomNumber].ingredients.map(
+              (ing, index) => (
                 <li key={index}>{ing}</li>
-              ))}
-            </ul>
+              )
+            )}
           </CardText>
-          <CardText>Calories {this.state.recipe[this.state.randomNumber].calories}</CardText>
-          <Button>Want a different recipe?</Button>
+          <CardText>
+            Calories {this.state.recipe[this.state.randomNumber].calories}
+          </CardText>
+          <Button onClick={this.getRecipe}>Want a different recipe?</Button>
         </CardBody>
       </Card>
     ) : (

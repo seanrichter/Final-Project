@@ -21,11 +21,8 @@ export default {
   getRandomCocktail: function() {
     return Axios.get("/api/cocktail");
   },
-
   // Gets all recipe
   getRandomRecipe: function() {
     return Axios.get("/api/recipe");
   },
-
-
 };

@@ -44,7 +44,7 @@ export default class CocktailCard extends Component {
         />
         <CardHeader>Have a cocktail!</CardHeader>
         <CardBody
-          inverse
+          inverse="false"
           style={{ backgroundColor: "#007bff", borderColor: "#007bff" }}
         >
           <CardTitle>{this.state.cocktail.name}</CardTitle>
@@ -52,14 +52,12 @@ export default class CocktailCard extends Component {
             Glass: {this.state.cocktail.glass}
             <br />
           </CardText>
-          <div>Ingredients:</div>
-          <ul>
-            {this.state.cocktail.ingredients.map(ing => (
-              <li key={ing.key}>
-                {ing.ingredient} - {ing.measure ? ing.measure : ""}
-              </li>
-            ))}
-          </ul>
+          Ingredients
+          {this.state.cocktail.ingredients.map(ing => (
+            <li key={ing.key}>
+              {ing.ingredient} - {ing.measure ? ing.measure : ""}
+            </li>
+          ))}
           <CardText>{this.state.cocktail.instructions}</CardText>
           <Button onClick={this.getCocktail}>Want a different cocktail?</Button>
         </CardBody>

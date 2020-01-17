@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const movieRoutes = require("./movie");
+const movieRoutes = require("./movieAPI");
 const cocktailRoutes = require("./cocktail");
 const recipeRoutes = require("./recipe");
 

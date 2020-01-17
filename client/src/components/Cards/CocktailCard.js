@@ -24,7 +24,7 @@ export default class CocktailCard extends Component {
     API.getRandomCocktail()
       .then(res => {
         this.setState({ cocktail: res.data });
-        console.log(this.state);
+        console.log("the cocktails are ", this.state);
       })
       .catch(err => console.log(err));
   };

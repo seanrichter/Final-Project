@@ -27,7 +27,7 @@ export default class RecipeCard extends Component {
           recipe: res.data,
           randomNumber: this.getRndInteger(0, res.data.length - 1)
         });
-        console.log("the state is ", this.state);
+        console.log("the recipe is ", this.state);
       })
       .catch(err => console.log(err));
   };

@@ -4,6 +4,8 @@ import AppNavbar from "./components/Nav/AppNavbar";
 import { Container, Row, Col } from "reactstrap";
 import CocktailCard from "./components/Cards/CocktailCard";
 import RecipeCard from "./components/Cards/RecipeCard";
+import MovieCard from "./components/Cards/MovieCard";
+import ShoppingList from "./components/Lists/ShoppingList";
 import store from "./store";
 import { loadUser } from "./actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,9 +24,11 @@ class App extends Component {
         <div className='App'>
           <AppNavbar />
           <Container>
+            <ShoppingList />
             <Row>
             <Col><CocktailCard /></Col>
             <Col><RecipeCard /></Col>
+            <Col><MovieCard /></Col>
             </Row>
           </Container>
         </div>

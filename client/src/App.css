@@ -19,3 +19,9 @@
     opacity: 0.01;
     transition: opacity 1000ms ease-in;
   }
+
+  .App {
+    background-color: black;
+    background-image: url(https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);
+    background-size: cover;
+  }

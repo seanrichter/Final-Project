@@ -28,7 +28,7 @@ open a 2nd terminal and run (mongod).
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+[Heroku](https://secret-basin-09931.herokuapp.com/)
 
 ## Built With
 

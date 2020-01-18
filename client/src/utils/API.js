@@ -29,4 +29,8 @@ export default {
   getRandomMovie: function() {
     return Axios.get("/api/movie");
   },
+   // Gets all album
+   getRandomAlbum: function() {
+    return Axios.get("/api/album");
+  }
 };

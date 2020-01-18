@@ -1,14 +1,25 @@
-.cocktail {
+.cocktailcard {
     box-shadow: 2px 2px 6px 0px  rgba(0, 0, 0, 0.3);
     padding: 10px;
+    border-color: black;
+    height: 1000px;
   }
 
-.recipe {
+.recipecard {
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     padding: 10px;
+    border-color: black;
+    height: 1000px;
 }
 
-.movie {
+.moviecard {
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     padding: 10px;
+    border-color: black;
+    height: 1000px;
+}
+
+img.card-img-top {
+    height: 348px;
+    width: 348px;
 }

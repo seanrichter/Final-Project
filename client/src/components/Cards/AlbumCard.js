@@ -11,23 +11,24 @@ import {
 import API from "../../utils/API";
 import "./Cards.css";
 
-export default class RecipeCard extends Component {
+export default class AlbumCard extends Component {
   state = {
-    recipe: {}
+    album: {}
   };
 
   componentDidMount() {
-    this.getRecipe();
+    this.getAlbum();
   }
 
-  getRecipe = () => {
-    API.getRandomRecipe()
+  getAlbum = () => {
+    //   console.log("getting album")
+    API.getRandomAlbum()
       .then(res => {
         this.setState({
-          recipe: res.data,
-          randomNumber: this.getRndInteger(0, res.data.length - 1)
+          album: res.data,
+          randomAlbum: this.getRndInteger(0, res.data.length - 1)
         });
-        console.log("the recipe is ", this.state);
+        console.log("the album is ", this.state);
       })
       .catch(err => console.log(err));
   };
@@ -41,36 +42,34 @@ export default class RecipeCard extends Component {
   };
 
   render() {
-    return this.state.recipe.length > 0 ? (
-      <Card className="recipe">
+    //   return console.log("hello album")
+    return this.state.album.length > 0 ? (
+      <Card className="album">
         <CardImg
           top
           width="100%"
           height="100%"
-          src={this.state.recipe[this.state.randomNumber].image}
+          src={this.state.albums.album.image}
           alt="Card image cap"
         />
-        <CardHeader>Here's a recipe!</CardHeader>{" "}
+        <CardHeader>Here's a album!</CardHeader>{" "}
         <CardBody
           inverse="false"
           style={{ backgroundColor: "#dc3545", borderColor: "#dc3545" }}
         >
           <CardTitle>
-            {this.state.recipe[this.state.randomNumber].name}
+            Album Name
+            {this.state.album.name}
+            
           </CardTitle>
           <CardText>
-            Ingredients
-          
-            {this.state.recipe[this.state.randomNumber].ingredients.map(
-              (ing, index) => (
-                <li key={index}>{ing}</li>
-              )
-            )}
+            Artist Name
+            {this.state.album.artist.name}
           </CardText>
           <CardText>
-            Calories {this.state.recipe[this.state.randomNumber].calories}
+            LastFM URL {this.state.album.artist.url}
           </CardText>
-          <Button onClick={this.getRecipe}>Want a different recipe?</Button>
+          <Button onClick={this.getAlbum}>Want a different album?</Button>
         </CardBody>
       </Card>
     ) : (

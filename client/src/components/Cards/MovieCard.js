@@ -47,13 +47,14 @@ export default class MovieCard extends Component {
         <CardImg
           top
           width="100%"
+          height="100%"
           src={this.state.movie[this.state.randomMovie].image}
           alt="Card image cap"
         />
         <CardHeader>Here's a Movie!</CardHeader>{" "}
         <CardBody
           inverse="false"
-          style={{ backgroundColor: "#dc3545", borderColor: "#dc3545" }}
+          style={{ backgroundColor: "#28a745", borderColor: "#28a745" }}
         >
           <CardTitle>{this.state.movie[this.state.randomMovie].title}</CardTitle>
           <CardText>
